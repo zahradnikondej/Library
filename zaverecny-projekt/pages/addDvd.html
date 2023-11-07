@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #edf4f4;
+        margin: 0;
+      }
+      form {
+        background-color: #dce8e8;
+        width: 50%;
+        margin: auto;
+        padding: 10px 30px;
+      }
+      label {
+        color: #000080;
+        font-size: 20px;
+        font-family: serif;
+      }
+      input,
+      select {
+        display: block;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 6px 0;
+        background-color: #dce8e8;
+        border: 2px solid silver;
+      }
+      button {
+        background-color: green;
+        color: white;
+        font-size: 18px;
+        padding: 10px 20px;
+        display: block;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        font-size: 50px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      "
+    >
+      <a href="../index.html">LMS</a>
+    </div>
+    <form method="post">
+      <h1>Add new DVD</h1>
+
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" placeholder="Title" required />
+
+      <label for="author">Author</label>
+      <input
+        type="text"
+        name="author"
+        id="author"
+        placeholder="Author"
+        required
+      />
+
+      <label for="yearOfPublication">Year of publication</label>
+      <input
+        type="date"
+        name="yearOfPublication"
+        id="yearOfPublication"
+        required
+      />
+
+      <label for="copiesAvailable">Copies available</label>
+      <input
+        type="number"
+        name="copiesAvailable"
+        id="copiesAvailable"
+        placeholder="Copies available"
+        required
+      />
+
+      <label for="totalCopies">Total number of copies</label>
+      <input
+        type="number"
+        name="totalCopies"
+        id="totalCopies"
+        required
+        placeholder="Total number of copies"
+      />
+
+      <label for="price">Price DVD</label>
+      <input
+        type="number"
+        name="price"
+        id="price"
+        placeholder="Price DVD"
+        required
+      />
+
+      <button type="submit">Add DVD</button>
+    </form>
+  </body>
+</html>

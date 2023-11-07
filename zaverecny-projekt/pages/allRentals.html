@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All rentals</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .allTables {
+        margin-left: auto;
+        margin-right: auto;
+        width: 1200px;
+      }
+      .allTables td {
+        text-align: center;
+      }
+      .allTables th {
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        background-color: black;
+      }
+      .form {
+        background-color: #dce8e8;
+        margin-top: 20px;
+        padding: 20px;
+      }
+
+      .form > div {
+        width: 900px;
+        margin: auto;
+      }
+      form a {
+        text-decoration: none;
+        border: 2px solid black;
+        background-color: #f9ba14;
+        font-size: 14px;
+        padding: 5px 20px;
+        color: black;
+      }
+      form a:hover {
+        background-color: #eaac10;
+      }
+      input,
+      select {
+        padding: 5px 0;
+
+        font-size: 14px;
+        width: 140px;
+      }
+
+      .button-search {
+        padding: 5px 30px;
+        background-color: silver;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        font-size: 50px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      "
+    >
+      <a href="../index.html">LMS</a>
+    </div>
+    <div class="form">
+      <div>
+      <h1>All rentals</h1>
+      <form method="get">
+        <input
+          type="text"
+          name="member"
+          id="member"
+          required
+          placeholder="Member"
+        />
+
+        <input
+          type="text"
+          name="title"
+          id="title"
+          required
+          placeholder="Title"
+        />
+
+        <input
+          type="text"
+          name="author"
+          id="author"
+          required
+          placeholder="Author"
+        />
+
+        <select name="typNazvu" id="typNazvu">
+          <option value="all">All types</option>
+          <option value="books">Books</option>
+          <option value="dvd">DVD</option>
+        </select>
+
+        <button type="submit" class="button-search">Search</button>
+        <a href="rentTitle.html"> Add rental </a>
+      </form>
+      </div>
+    </div>
+
+      <table class="allTables">
+        <thead>
+          <tr>
+            <th>MEMBER</th>
+            <th>TITLE</th>
+            <th>AUTHOR</th>
+            <th>DATE OF BORROWING</th>
+            <th>DATE OF RETURNING</th>
+            <th>MAX. DATE OF RETURNING</th>
+            <th>TITLE TYPE</th>
+            <th>RETURN</th>
+            <th>PROLONG</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </body>
+</html>

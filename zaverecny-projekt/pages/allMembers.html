@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All members</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .allTables {
+        margin: 0 auto;
+        width: 1200px;
+      }
+      .allTables td {
+        text-align: center;
+      }
+      .allTables th {
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        background-color: black;
+      }
+      .form {
+        background-color: #dce8e8;
+        margin-top: 20px;
+        padding: 20px;
+      }
+
+      .form > div {
+        width: 800px;
+        margin: auto;
+      }
+      form a {
+        text-decoration: none;
+        border: 2px solid black;
+        background-color: #f9ba14;
+        font-size: 14px;
+        padding: 5px 20px;
+        color: black;
+      }
+
+      form a:hover {
+        background-color: #eaac10;
+      }
+      input,
+      select {
+        padding: 5px 0;
+
+        font-size: 14px;
+        width: 180px;
+      }
+
+      .button-search {
+        padding: 5px 30px;
+        background-color: silver;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        font-size: 50px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      "
+    >
+      <a href="../index.html">LMS</a>
+    </div>
+    <div class="form">
+      <div>
+        <h1>All members</h1>
+        <form method="get">
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            placeholder="First name"
+            required
+          />
+
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="Last name"
+            required
+          />
+
+          <input
+            type="number"
+            name="personalID"
+            id="personalID"
+            placeholder="Personal ID"
+            required
+          />
+
+          <button type="submit" class="button-search">Search</button>
+          <a href="addMembers.html">Add Member</a>
+        </form>
+      </div>
+    </div>
+    <div>
+      <table class="allTables">
+        <thead>
+          <tr>
+            <th>FIRST NAME</th>
+            <th>LAST NAME</th>
+            <th>PERSONAL ID</th>
+            <th>DATE OF BIRTH</th>
+            <th>MEMBER DETAIL</th>
+            <th></th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </body>
+</html>

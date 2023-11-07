@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notifications</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .allTables {
+        margin-left: auto;
+        margin-right: auto;
+        width: 1200px;
+      }
+      .allTables td {
+        text-align: center;
+      }
+      .allTables th {
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        background-color: black;
+      }
+      .form {
+        background-color: #dce8e8;
+        margin-top: 20px;
+        padding: 20px;
+      }
+
+      .form > div {
+        width: 680px;
+        margin: auto;
+      }
+      input,
+      select {
+        padding: 5px 0;
+
+        font-size: 14px;
+        width: 180px;
+      }
+
+      .button-search {
+        padding: 5px 30px;
+        background-color: silver;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        font-size: 50px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      "
+    >
+      <a href="../index.html">LMS</a>
+    </div>
+    <div class="form">
+      <div>
+        <form method="get">
+          <h1>Notifications</h1>
+
+          <input
+            type="text"
+            name="member"
+            id="member"
+            placeholder="Member"
+            required
+          />
+
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            placeholder="Subject"
+            required
+          />
+
+          <input
+            type="text"
+            name="text"
+            id="text"
+            placeholder="Text"
+            required
+          />
+
+          <button type="submit" class="button-search">Search</button>
+        </form>
+      </div>
+    </div>
+    <div>
+      <table class="allTables">
+        <thead>
+          <tr>
+            <th>MEMBER</th>
+            <th>SUBJECT</th>
+            <th>TEXT</th>
+            <th>DATE</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rent a title</title>
+    <style>
+      body {
+        background-color: #edf4f4;
+        margin: 0;
+      }
+      form {
+        background-color: #dce8e8;
+        width: 50%;
+        margin: auto;
+        padding: 10px 30px;
+      }
+      label {
+        color: #000080;
+        font-size: 20px;
+        font-family: serif;
+      }
+      input,
+      select {
+        display: block;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 6px 0;
+        background-color: #dce8e8;
+        border: 2px solid silver;
+      }
+      button {
+        background-color: green;
+        color: white;
+        font-size: 18px;
+        padding: 10px 20px;
+        display: block;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        font-size: 50px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      "
+    >
+      <a href="../index.html">LMS</a>
+    </div>
+
+    <form method="post">
+      <h1>Rent a title</h1>
+      <label for="member">Member</label>
+      <input
+        type="text"
+        name="member"
+        id="member"
+        required
+        placeholder="Member"
+      />
+
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" required placeholder="Title" />
+
+      <label for="dateOfLoan">Date of loan</label>
+      <input type="date" name="dateOfLoan" id="dateOfLoan" required />
+
+      <button type="submit">Rent</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add members</title>
+    <style>
+      body {
+        background-color: #edf4f4;
+        margin: 0;
+      }
+      form {
+        background-color: #dce8e8;
+        width: 50%;
+        margin: auto;
+        padding: 10px 30px;
+      }
+      label {
+        color: #000080;
+        font-size: 20px;
+        font-family: serif;
+      }
+      input,
+      select {
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 6px 0;
+        background-color: #dce8e8;
+        border: 2px solid silver;
+      }
+      button {
+        background-color: green;
+        color: white;
+        font-size: 18px;
+        padding: 10px 20px;
+        display: block;
+        margin: 20px 0;
+      }
+      .radio {
+        width: fit-content;
+        display: inline;
+        margin-left: 5px;
+      }
+      .checkbox {
+        margin-top: 15px;
+        width: fit-content;
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        font-size: 50px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      "
+    >
+      <a href="../index.html">LMS</a>
+    </div>
+    <form method="post">
+      <h1>Add members</h1>
+
+      <label for="LastName">First name</label>
+      <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        placeholder="First name"
+        required
+      />
+
+      <label for="LastName">Last name</label>
+      <input
+        type="text"
+        name="LastName"
+        id="LastName"
+        placeholder="LastName"
+        required
+      />
+
+      <label for="personalID">Personal ID</label>
+      <input
+        type="number"
+        name="personalID"
+        id="personalID"
+        placeholder="Personal ID"
+        required
+      />
+
+      <label for="dateBirth">Date of birth</label>
+      <input type="date" name="dateBirth" id="dateBirth" required />
+
+      <label> Gender:</label>
+      <input
+        type="radio"
+        class="radio"
+        name="gender"
+        id="male"
+        value="Male"
+        required
+      />
+      <label for="male">Male</label>
+
+      <input
+        type="radio"
+        class="radio"
+        name="gender"
+        id="female"
+        value="Female"
+        required
+      />
+      <label for="female">Female</label>
+      <br />
+
+      <input type="checkbox" class="checkbox" name="agre" id="agre" required />
+      <label for="agre">I agree to the terms</label>
+
+      <button type="submit">Add member</button>
+    </form>
+  </body>
+</html>
