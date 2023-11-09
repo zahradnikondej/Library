@@ -1,0 +1,31 @@
+body {
+  background-image: url(../images/libraryBackground.jpg);
+}
+section {
+  background-color: #f7f6f6;
+  width: 40%;
+  min-width: 500px;
+  padding: 2em;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  width: fit-content;
+
+  color: #c70202;
+  text-shadow: silver 2px 2px;
+  border-top: 2px solid #c70202;
+  margin-bottom: -7px;
+}
+section a {
+  color: blue;
+  text-decoration: none;
+}
+section a:hover {
+  color: red;
+  text-decoration: underline;
+}
+section a:visited {
+  color: violet;
+}
