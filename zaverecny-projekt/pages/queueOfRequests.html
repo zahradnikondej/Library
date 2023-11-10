@@ -5,34 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Queue of requests</title>
     <link rel="stylesheet" href="../style/table.css" />
-    <style>
-      body {
-        margin: 0;
-      }
-
-      .form {
-        background-color: #dce8e8;
-        margin-top: 20px;
-        padding: 20px;
-      }
-
-      .form > div {
-        width: 650px;
-        margin: auto;
-      }
-      input,
-      select {
-        padding: 5px 0;
-
-        font-size: 14px;
-        width: 160px;
-      }
-
-      .button-search {
-        padding: 5px 30px;
-        background-color: silver;
-      }
-    </style>
+    <link rel="stylesheet" href="../style/formSearch.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div
@@ -44,9 +24,9 @@
       <a href="../index.html">LMS</a>
     </div>
     <div class="form">
-      <div>
+      <div class="center">
         <form method="get">
-          <h1>Queue of requests</h1>
+          <h1><i class="fa-solid fa-address-book"></i>Queue of requests</h1>
           <input
             type="text"
             name="member"

@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+}
+
+.form {
+  background-color: #dce8e8;
+  margin-top: 20px;
+  padding: 20px;
+}
+.center {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+form a {
+  text-decoration: none;
+  border: 2px solid black;
+  background-color: #f9ba14;
+  font-size: 14px;
+  padding: 5px 20px;
+  color: black;
+}
+
+form a:hover {
+  background-color: #eaac10;
+}
+input,
+select {
+  padding: 5px 0;
+  font-size: 14px;
+  width: 180px;
+}
+
+.button-search {
+  padding: 5px 30px;
+  background-color: silver;
+}

@@ -11,7 +11,7 @@ body {
 ul li {
   list-style: none;
   display: inline-block;
-  padding: 0 18px;
+  padding: 0 30px;
 }
 ul a {
   color: white;
@@ -20,4 +20,50 @@ ul a {
 }
 li {
   color: white;
+}
+a i {
+  margin-right: 3px;
+}
+.logo {
+  width: fit-content;
+  margin: 10px auto 10px;
+}
+.logo a {
+  text-decoration: none;
+}
+.logo1 {
+  position: relative;
+  right: 55px;
+}
+.log1 {
+  position: absolute;
+  border: 5px solid red;
+  width: 40px;
+  height: 40px;
+  z-index: 4;
+}
+.log2 {
+  position: absolute;
+  border: 5px solid green;
+  width: 40px;
+  height: 40px;
+  left: -10px;
+}
+.log3 {
+  position: absolute;
+  border: 5px solid blue;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  left: -10px;
+  z-index: 2;
+}
+.log4 {
+  position: absolute;
+  border: 5px solid orange;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+
+  z-index: 1;
 }
