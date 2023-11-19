@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All rentals</title>
     <link rel="stylesheet" href="../style/table.css" />
-    <link rel="stylesheet" href="../style/formSearch.css">
+    <link rel="stylesheet" href="../style/formSearch.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -13,72 +13,133 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-   
+    <link rel="stylesheet" href="../style/menu.css" />
   </head>
   <body>
-    <div
-      style="
-        font-size: 50px;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      "
-    >
-      <a href="../index.html">LMS</a>
-    </div>
-    <div class="form">
-      <div class="center">
-      <h1><i class="fa-solid fa-address-book"></i>All rentals</h1>
-      <form method="get">
-        <input
-          type="text"
-          name="member"
-          id="member"
-          required
-          placeholder="Member"
-        />
-
-        <input
-          type="text"
-          name="title"
-          id="title"
-          required
-          placeholder="Title"
-        />
-
-        <input
-          type="text"
-          name="author"
-          id="author"
-          required
-          placeholder="Author"
-        />
-
-        <select name="typNazvu" id="typNazvu">
-          <option value="all">All types</option>
-          <option value="books">Books</option>
-          <option value="dvd">DVD</option>
-        </select>
-
-        <button type="submit" class="button-search">Search</button>
-        <a href="rentTitle.html"> Add rental </a>
-      </form>
+    <div class="logo">
+      <div class="logo1">
+        <div class="log1"></div>
+        <div class="log2"></div>
+        <div class="log3"></div>
+        <div class="log4"></div>
+      </div>
+      <div
+        style="
+          font-size: 50px;
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        "
+      >
+        <a href="../index.html">LMS</a>
       </div>
     </div>
 
-      <table class="allTables">
-        <thead>
-          <tr>
-            <th>MEMBER</th>
-            <th>TITLE</th>
-            <th>AUTHOR</th>
-            <th>DATE OF BORROWING</th>
-            <th>DATE OF RETURNING</th>
-            <th>MAX. DATE OF RETURNING</th>
-            <th>TITLE TYPE</th>
-            <th>RETURN</th>
-            <th>PROLONG</th>
-          </tr>
-        </thead>
-      </table>
+    <nav class="menu">
+      <ul>
+        <li>
+          <a href="../index.html"><i class="fa-solid fa-house"></i>Home</a>
+        </li>
+        <li class="dropdown">
+          <a href="#"
+            ><i class="fa-solid fa-book" style="color: #fafafa"></i>Titles</a
+          >
+          <ul class="dropdown-menu">
+            <li><a href="books.html">Books</a></li>
+            <li><a href="dvd.html">DVD</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#"
+            ><i class="fa-solid fa-users" style="color: #ffffff"></i>Members</a
+          >
+
+          <ul class="dropdown-menu">
+            <li><a href="allMembers.html">Members</a></li>
+            <li><a href="addMembers.html">Add Member</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#"
+            ><i class="fa-solid fa-book" style="color: #fafafa"></i>Rentals</a
+          >
+
+          <ul class="dropdown-menu">
+            <li><a href="allRentals.html">Rentals</a></li>
+            <li><a href="rentTitle.html">Rent a title</a></li>
+            <li><a href="queueOfRequests.html">Queue of request</a></li>
+            <li><a href="rentalsPastDue.html">Rentals pas due</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="notifications.html"
+            ><i class="fa-solid fa-bookmark" style="color: #ffffff"></i
+            >Notifications</a
+          >
+        </li>
+        <li>
+          <a href="guide.html"
+            ><i class="fa-solid fa-circle-info" style="color: #ffffff"></i
+            >Guide</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="form">
+      <div class="center">
+        <h1><i class="fa-solid fa-address-book"></i>All rentals</h1>
+        <form method="get">
+          <input
+            type="text"
+            name="member"
+            id="member"
+            required
+            placeholder="Member"
+          />
+
+          <input
+            type="text"
+            name="title"
+            id="title"
+            required
+            placeholder="Title"
+          />
+
+          <input
+            type="text"
+            name="author"
+            id="author"
+            required
+            placeholder="Author"
+          />
+
+          <select name="typNazvu" id="typNazvu">
+            <option value="all">All types</option>
+            <option value="books">Books</option>
+            <option value="dvd">DVD</option>
+          </select>
+
+          <button type="submit" class="button-search">Search</button>
+          <a href="rentTitle.html"> Add rental </a>
+        </form>
+      </div>
     </div>
+
+    <table class="allTables">
+      <thead>
+        <tr>
+          <th>MEMBER</th>
+          <th>TITLE</th>
+          <th>AUTHOR</th>
+          <th>DATE OF BORROWING</th>
+          <th>DATE OF RETURNING</th>
+          <th>MAX. DATE OF RETURNING</th>
+          <th>TITLE TYPE</th>
+          <th>RETURN</th>
+          <th>PROLONG</th>
+        </tr>
+      </thead>
+    </table>
   </body>
 </html>

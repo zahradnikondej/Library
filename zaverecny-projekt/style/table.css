@@ -14,3 +14,27 @@
 .allTables tr:nth-child(odd) {
   background-color: rgb(200, 200, 200);
 }
+/* td[title]:hover::after {
+  content: attr(title);
+  display: block;
+  position: absolute;
+  top: 289px;
+  left: 350px;
+  background-color: red;
+  color: #fff;
+  padding: 5px;
+} */
+.tooltip {
+  background-color: red;
+  position: absolute;
+  left: 350px;
+  top: 289px;
+  visibility: hidden;
+}
+.tooltip p {
+  margin: 3px;
+  color: white;
+}
+td:hover .tooltip {
+  visibility: visible;
+}

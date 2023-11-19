@@ -19,7 +19,7 @@
         <div class="log1"></div>
         <div class="log2"></div>
         <div class="log3"></div>
-        <dv class="log4"></dv>
+        <div class="log4"></div>
       </div>
       <div
         style="
@@ -30,28 +30,44 @@
         <a href="">LMS</a>
       </div>
     </div>
-    <div class="menu">
+
+    <nav class="menu">
       <ul>
         <li>
           <a href="./index.html"><i class="fa-solid fa-house"></i>Home</a>
         </li>
-        <li>
-          <a href="./pages/titles.html"
+        <li class="dropdown">
+          <a href="#"
             ><i class="fa-solid fa-book" style="color: #fafafa"></i>Titles</a
           >
+          <ul class="dropdown-menu">
+            <li><a href="./pages/books.html">Books</a></li>
+            <li><a href="./pages/dvd.html">DVD</a></li>
+          </ul>
         </li>
 
-        <li>
-          <a href="./pages/members.html"
+        <li class="dropdown">
+          <a href="#"
             ><i class="fa-solid fa-users" style="color: #ffffff"></i>Members</a
           >
+
+          <ul class="dropdown-menu">
+            <li><a href="./pages/allMembers.html">Members</a></li>
+            <li><a href="./pages/addMembers.html">Add Member</a></li>
+          </ul>
         </li>
 
-        <li>
-          <a href="./pages/rentals.html"
-            ><i class="fa-solid fa-address-book" style="color: #ffffff"></i
-            >Rentals</a
+        <li class="dropdown">
+          <a href="#"
+            ><i class="fa-solid fa-book" style="color: #fafafa"></i>Rentals</a
           >
+
+          <ul class="dropdown-menu">
+            <li><a href="./pages/allRentals.html">Rentals</a></li>
+            <li><a href="./pages/rentTitle.html">Rent a title</a></li>
+            <li><a href="./pages/queueOfRequests.html">Queue of request</a></li>
+            <li><a href="./pages/rentalsPastDue.html">Rentals pas due</a></li>
+          </ul>
         </li>
 
         <li>
@@ -67,7 +83,8 @@
           >
         </li>
       </ul>
-    </div>
+    </nav>
+
     <div>
       <img src="./images/libraryBackground.jpg" alt="" style="width: 100%" />
     </div>

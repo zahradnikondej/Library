@@ -15,17 +15,22 @@ h2 {
 
   color: #c70202;
   text-shadow: silver 2px 2px;
-  border-top: 2px solid #c70202;
+
   margin-bottom: -7px;
 }
-section a {
+h2::first-letter {
+  color: blue;
+  font-size: 1.5em;
+}
+section a:link {
   color: blue;
   text-decoration: none;
-}
-section a:hover {
-  color: red;
-  text-decoration: underline;
+  font-weight: 600;
 }
 section a:visited {
   color: violet;
+}
+section a:hover {
+  color: #c70202;
+  text-decoration: underline;
 }

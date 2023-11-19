@@ -13,9 +13,12 @@ label {
   font-size: 20px;
   font-family: serif;
 }
+label::after {
+  content: "*";
+  color: red;
+}
 input,
 select {
-  display: block;
   margin-bottom: 10px;
   box-sizing: border-box;
   width: 100%;
@@ -29,5 +32,15 @@ button {
   font-size: 18px;
   padding: 10px 20px;
   display: block;
-  margin: 21px 0;
+  margin: 20px 0;
+}
+.radio {
+  width: fit-content;
+  display: inline;
+  margin-left: 5px;
+}
+.checkbox {
+  margin-top: 15px;
+  width: fit-content;
+  display: inline;
 }

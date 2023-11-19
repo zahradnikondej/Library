@@ -13,16 +13,79 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="../style/menu.css" />
   </head>
   <body>
-    <div
-      style="
-        font-size: 50px;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      "
-    >
-      <a href="../index.html">LMS</a>
+    <div class="logo">
+      <div class="logo1">
+        <div class="log1"></div>
+        <div class="log2"></div>
+        <div class="log3"></div>
+        <div class="log4"></div>
+      </div>
+      <div
+        style="
+          font-size: 50px;
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        "
+      >
+        <a href="../index.html">LMS</a>
+      </div>
     </div>
+
+    <nav class="menu">
+      <ul>
+        <li>
+          <a href="../index.html"><i class="fa-solid fa-house"></i>Home</a>
+        </li>
+        <li class="dropdown">
+          <a href="#"
+            ><i class="fa-solid fa-book" style="color: #fafafa"></i>Titles</a
+          >
+          <ul class="dropdown-menu">
+            <li><a href="books.html">Books</a></li>
+            <li><a href="dvd.html">DVD</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#"
+            ><i class="fa-solid fa-users" style="color: #ffffff"></i>Members</a
+          >
+
+          <ul class="dropdown-menu">
+            <li><a href="allMembers.html">Members</a></li>
+            <li><a href="addMembers.html">Add Member</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#"
+            ><i class="fa-solid fa-book" style="color: #fafafa"></i>Rentals</a
+          >
+
+          <ul class="dropdown-menu">
+            <li><a href="allRentals.html">Rentals</a></li>
+            <li><a href="rentTitle.html">Rent a title</a></li>
+            <li><a href="queueOfRequests.html">Queue of request</a></li>
+            <li><a href="rentalsPastDue.html">Rentals pas due</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="notifications.html"
+            ><i class="fa-solid fa-bookmark" style="color: #ffffff"></i
+            >Notifications</a
+          >
+        </li>
+        <li>
+          <a href="guide.html"
+            ><i class="fa-solid fa-circle-info" style="color: #ffffff"></i
+            >Guide</a
+          >
+        </li>
+      </ul>
+    </nav>
     <div class="form">
       <div class="center">
         <h1><i class="fa-solid fa-users"></i> Members</h1>

@@ -3,61 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/formAdd.css" />
     <title>Add members</title>
-    <style>
-      body {
-        background-color: #edf4f4;
-        margin: 0;
-      }
-      form {
-        background-color: #dce8e8;
-        width: 50%;
-        margin: auto;
-        padding: 10px 30px;
-      }
-      label {
-        color: #000080;
-        font-size: 20px;
-        font-family: serif;
-      }
-      input,
-      select {
-        margin-bottom: 10px;
-        box-sizing: border-box;
-        width: 100%;
-        padding: 6px 0;
-        background-color: #dce8e8;
-        border: 2px solid silver;
-      }
-      button {
-        background-color: green;
-        color: white;
-        font-size: 18px;
-        padding: 10px 20px;
-        display: block;
-        margin: 20px 0;
-      }
-      .radio {
-        width: fit-content;
-        display: inline;
-        margin-left: 5px;
-      }
-      .checkbox {
-        margin-top: 15px;
-        width: fit-content;
-        display: inline;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style/menu.css" />
   </head>
   <body>
-    <div
-      style="
-        font-size: 50px;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      "
-    >
-      <a href="../index.html">LMS</a>
+    <div class="logo">
+      <div class="logo1">
+        <div class="log1"></div>
+        <div class="log2"></div>
+        <div class="log3"></div>
+        <div class="log4"></div>
+      </div>
+      <div
+        style="
+          font-size: 50px;
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        "
+      >
+        <a href="../index.html">LMS</a>
+      </div>
     </div>
+
+    <nav class="menu">
+      <ul>
+        <li>
+          <a href="../index.html"><i class="fa-solid fa-house"></i>Home</a>
+        </li>
+        <li class="dropdown">
+          <a href="#"
+            ><i class="fa-solid fa-book" style="color: #fafafa"></i>Titles</a
+          >
+          <ul class="dropdown-menu">
+            <li><a href="books.html">Books</a></li>
+            <li><a href="dvd.html">DVD</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#"
+            ><i class="fa-solid fa-users" style="color: #ffffff"></i>Members</a
+          >
+
+          <ul class="dropdown-menu">
+            <li><a href="allMembers.html">Members</a></li>
+            <li><a href="addMembers.html">Add Member</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#"
+            ><i class="fa-solid fa-book" style="color: #fafafa"></i>Rentals</a
+          >
+
+          <ul class="dropdown-menu">
+            <li><a href="allRentals.html">Rentals</a></li>
+            <li><a href="rentTitle.html">Rent a title</a></li>
+            <li><a href="queueOfRequests.html">Queue of request</a></li>
+            <li><a href="rentalsPastDue.html">Rentals pas due</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="notifications.html"
+            ><i class="fa-solid fa-bookmark" style="color: #ffffff"></i
+            >Notifications</a
+          >
+        </li>
+        <li>
+          <a href="guide.html"
+            ><i class="fa-solid fa-circle-info" style="color: #ffffff"></i
+            >Guide</a
+          >
+        </li>
+      </ul>
+    </nav>
     <form method="post">
       <h1>Add members</h1>
 
