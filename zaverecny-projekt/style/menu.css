@@ -35,7 +35,7 @@ body {
   display: none;
   position: absolute;
   background-color: white;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
 }
 .menu .dropdown-menu li {
   display: block;
@@ -56,18 +56,29 @@ a i {
   width: fit-content;
   margin: 10px auto 10px;
 }
+
 .logo a {
   text-decoration: none;
 }
 .logo1 {
   position: relative;
-  right: 55px;
+  right: 60px;
+  animation: rotate 1s linear;
+  transform-origin: left;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+  }
 }
 .log1 {
   position: absolute;
   border: 5px solid red;
   width: 40px;
   height: 40px;
+  transform: rotate(45deg);
+
   z-index: 4;
 }
 .log2 {
@@ -76,6 +87,7 @@ a i {
   width: 40px;
   height: 40px;
   left: -10px;
+  transform: rotate(30deg);
 }
 .log3 {
   position: absolute;
@@ -85,6 +97,7 @@ a i {
   top: 10px;
   left: -10px;
   z-index: 2;
+  transform: rotate(80deg);
 }
 .log4 {
   position: absolute;
@@ -92,6 +105,6 @@ a i {
   width: 40px;
   height: 40px;
   top: 10px;
-
   z-index: 1;
+  transform: rotate(70deg);
 }

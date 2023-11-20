@@ -29,12 +29,16 @@
   position: absolute;
   left: 350px;
   top: 289px;
-  visibility: hidden;
+
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 0.5s ease-in-out;
 }
+
 .tooltip p {
   margin: 3px;
   color: white;
 }
 td:hover .tooltip {
-  visibility: visible;
+  opacity: 1;
 }
