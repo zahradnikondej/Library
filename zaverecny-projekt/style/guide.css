@@ -3,6 +3,7 @@ body {
 }
 section {
   background-color: #f7f6f6;
+
   width: 40%;
   min-width: 500px;
   padding: 2em;
@@ -33,4 +34,14 @@ section a:visited {
 section a:hover {
   color: #c70202;
   text-decoration: underline;
+}
+@media only screen and (max-width: 414px) {
+  body {
+    background-image: none;
+  }
+  section {
+    min-width: 400px;
+    background-color: white;
+    padding: 0 8px;
+  }
 }

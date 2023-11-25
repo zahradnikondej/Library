@@ -6,7 +6,6 @@ body {
   justify-content: center;
 
   background-color: #303030;
-  color: white;
 }
 .menu ul {
   list-style: none;
@@ -62,22 +61,14 @@ a i {
 }
 .logo1 {
   position: relative;
-  right: 60px;
-  animation: rotate 1s linear;
-  transform-origin: left;
+  right: 50px;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(360deg);
-  }
-}
 .log1 {
   position: absolute;
   border: 5px solid red;
   width: 40px;
   height: 40px;
-  transform: rotate(45deg);
 
   z-index: 4;
 }
@@ -87,7 +78,6 @@ a i {
   width: 40px;
   height: 40px;
   left: -10px;
-  transform: rotate(30deg);
 }
 .log3 {
   position: absolute;
@@ -97,7 +87,6 @@ a i {
   top: 10px;
   left: -10px;
   z-index: 2;
-  transform: rotate(80deg);
 }
 .log4 {
   position: absolute;
@@ -106,5 +95,18 @@ a i {
   height: 40px;
   top: 10px;
   z-index: 1;
-  transform: rotate(70deg);
+}
+@media only screen and (max-width: 420px) {
+  img {
+    display: none;
+  }
+  .menu ul li {
+    display: block;
+    width: 414px;
+    text-align: center;
+  }
+  .menu .dropdown-menu {
+    display: none;
+    position: relative;
+  }
 }

@@ -14,24 +14,15 @@
 .allTables tr:nth-child(odd) {
   background-color: rgb(200, 200, 200);
 }
-/* td[title]:hover::after {
-  content: attr(title);
-  display: block;
-  position: absolute;
-  top: 289px;
-  left: 350px;
-  background-color: red;
-  color: #fff;
-  padding: 5px;
-} */
+
 .tooltip {
   background-color: red;
   position: absolute;
-  left: 350px;
+  left: 780px;
   top: 289px;
 
   opacity: 0;
-  transform: translateX(0);
+
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -41,4 +32,9 @@
 }
 td:hover .tooltip {
   opacity: 1;
+}
+@media only screen and (max-width: 420px) {
+  .container {
+    overflow-x: auto;
+  }
 }
