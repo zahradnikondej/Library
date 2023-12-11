@@ -26,13 +26,18 @@ select {
   background-color: #dce8e8;
   border: 2px solid silver;
 }
-button {
-  background-color: green;
+form button {
+  background: linear-gradient(to bottom, white 0%, green 100%);
   color: white;
   font-size: 18px;
   padding: 10px 20px;
   display: block;
   margin: 20px 0;
+}
+form button:hover {
+  background: linear-gradient(to top, white 0%, green 100%);
+  cursor: pointer;
+  transform: scale(0.95);
 }
 .radio {
   width: fit-content;
@@ -43,4 +48,12 @@ button {
   margin-top: 15px;
   width: fit-content;
   display: inline;
+}
+
+button {
+  margin: 10px 0;
+  padding: 5px 20px;
+}
+.button {
+  text-align: center;
 }
