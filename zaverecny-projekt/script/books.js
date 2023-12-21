@@ -46,4 +46,5 @@ function removeHandler(index) {
   localStorage.setItem("books", JSON.stringify(books));
   output.deleteRow(index);
   // vzdy mi realodne stranku
+  location.reload();
 }
