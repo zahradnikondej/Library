@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <textarea name="" id="userInput" cols="30" rows="4"></textarea>
+    <button onclick="analyzeText()">Analyze</button>
+    <div>
+      <label for="search">Search:</label>
+      <input type="text" id="search" />
+      <button onclick="searchText()">Search</button>
+    </div>
+    <p id="result"></p>
+    <h2>Analyze</h2>
+    <p id="length"></p>
+    <p id="withoutSpace"></p>
+    <p id="numbers"></p>
+    <p id="longestText"></p>
+
+    <br /><br />
+    <button onclick="transformText()">Transform text</button>
+    <p id="transformText"></p>
+    <script src="script.js"></script>
+  </body>
+</html>
