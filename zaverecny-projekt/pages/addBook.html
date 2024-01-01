@@ -43,7 +43,7 @@
           >
           <ul class="dropdown-menu">
             <li><a href="books.html">Books</a></li>
-            <li><a href="dvd.html">DVD</a></li>
+            <li><a href="dvds.html">DVD</a></li>
           </ul>
         </li>
 
@@ -97,8 +97,8 @@
         placeholder="Author"
       />
 
-      <label for="title">Title</label>
-      <input type="text" name="title" id="title" required placeholder="Title" />
+      <label for="name">Title</label>
+      <input type="text" name="name" id="name" required placeholder="Title" />
 
       <label for="isbn">ISBN</label>
       <input type="text" name="isbn" id="isbn" required placeholder="ISBN" />
@@ -112,20 +112,20 @@
         placeholder="Number of pages"
       />
 
-      <label for="copiesAvailable">Copies available</label>
+      <label for="availableCopies">Copies available</label>
       <input
         type="number"
-        name="copiesAvailable"
-        id="copiesAvailable"
+        name="availableCopies"
+        id="availableCopies"
         required
         placeholder="Copies available"
       />
 
-      <label for="totalCopies">Total number of copies</label>
+      <label for="totalAvailableCopies">Total number of copies</label>
       <input
         type="number"
-        name="totalCopies"
-        id="totalCopies"
+        name="totalAvailableCopies"
+        id="totalAvailableCopies"
         required
         placeholder="Total number of copies"
       />
@@ -133,6 +133,6 @@
       <button type="submit">Submit</button>
     </form>
 
-    <script src="../script/form.js"></script>
+    <script src="../script/addBook.js"></script>
   </body>
 </html>

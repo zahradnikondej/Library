@@ -45,7 +45,7 @@
           >
           <ul class="dropdown-menu">
             <li><a href="books.html">Books</a></li>
-            <li><a href="dvd.html">DVD</a></li>
+            <li><a href="dvds.html">DVD</a></li>
           </ul>
         </li>
 
@@ -90,7 +90,7 @@
 
     <div class="form">
       <div class="center">
-        <h1><i class="fa-solid fa-compact-disc"></i>DVD</h1>
+        <h1><i class="fa-solid fa-compact-disc"></i>DVD's</h1>
         <form method="get">
           <input
             type="text"
@@ -123,9 +123,13 @@
             <th>AVAILABLE COPIES</th>
             <th>TOTAL AVAILABLE COPIES</th>
             <th>TITLE <span> DETAIL</span></th>
+            <th></th>
           </tr>
         </thead>
+        <tbody id="output"></tbody>
       </table>
     </div>
+    <div id="noData" class="noData"></div>
+    <script src="../script/dvds.js"></script>
   </body>
 </html>

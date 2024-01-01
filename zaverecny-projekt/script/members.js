@@ -1,25 +1,24 @@
-let output = document.getElementById("output");
 let noData = document.getElementById("noData");
+let output = document.getElementById("output");
 
-async function fetchBooks() {
-  const response = await fetch("https://student-fed1.metis.academy/api/Books");
-  const books = await response.json();
-
+async function fetchData() {
+  const response = await fetch(
+    "https://student-fed1.metis.academy/api/Members"
+  );
+  const members = await response.json();
   if (!response.ok) {
     let message = document.createElement("p");
     message.innerText = "No data to display";
     noData.appendChild(message);
   }
 
-  for (let i = 0; i < books.length; i++) {
+  for (let i = 0; i < members.length; i++) {
     let row = document.createElement("tr");
 
-    createTd(row, books[i].name);
-    createTd(row, books[i].author);
-    createTd(row, books[i].isbn);
-    createTd(row, books[i].availableCopies);
-    createTd(row, books[i].totalAvailableCopies);
-    createTd(row, books[i].numberOfPages);
+    createTd(row, members[i].firstName);
+    createTd(row, members[i].lastName);
+    createTd(row, members[i].personalId);
+    createTd(row, members[i].dateOfBirth);
 
     let titleIcon = document.createElement("td");
     let icon = document.createElement("i");
@@ -31,28 +30,25 @@ async function fetchBooks() {
     deleteButton.textContent = "Delete";
     deleteButton.classList.add("delete-button");
     deleteButton.onclick = () => {
-      removeHandler(books[i].id);
+      removeHandler(members[i].id);
     };
-
     row.appendChild(deleteButton);
-
     output.append(row);
   }
 }
 
-fetchBooks();
-
-// vytvoril som si funkciu ktora mi bude vytvarat "td"
-function createTd(row, id) {
-  let td = document.createElement("td");
-  td.textContent = id;
-  row.appendChild(td);
-}
+fetchData();
 
 async function removeHandler(id) {
-  fetch(`https://student-fed1.metis.academy/api/Books/${id}`, {
+  fetch(`https://student-fed1.metis.academy/api/Members/${id}`, {
     method: "DELETE",
   }).then(() => {
     location.reload();
   });
+}
+
+function createTd(row, id) {
+  let td = document.createElement("td");
+  td.textContent = id;
+  row.appendChild(td);
 }

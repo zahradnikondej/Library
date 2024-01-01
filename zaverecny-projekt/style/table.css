@@ -15,29 +15,17 @@
   background-color: rgb(200, 200, 200);
 }
 
-.tooltip {
-  background-color: red;
-  position: absolute;
-  left: 780px;
-  top: 289px;
-
-  opacity: 0;
-
-  transition: opacity 0.5s ease-in-out;
-}
-
-.tooltip p {
-  margin: 3px;
-  color: white;
-}
-td:hover .tooltip {
-  opacity: 1;
-}
-table button {
+table .delete-button {
   padding: 8px 30px;
-  width: 100%;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
   background: linear-gradient(to bottom, white 0%, red 100%);
+  border-radius: 20px;
+  font-size: 16px;
 }
+
 .noData {
   display: flex;
   justify-content: center;

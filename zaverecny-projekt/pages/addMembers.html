@@ -43,7 +43,7 @@
           >
           <ul class="dropdown-menu">
             <li><a href="books.html">Books</a></li>
-            <li><a href="dvd.html">DVD</a></li>
+            <li><a href="dvds.html">DVD</a></li>
           </ul>
         </li>
 
@@ -85,10 +85,10 @@
         </li>
       </ul>
     </nav>
-    <form method="post">
+    <form method="post" onsubmit="handleSubmit()">
       <h1>Add members</h1>
 
-      <label for="LastName">First name</label>
+      <label for="firstName">First name</label>
       <input
         type="text"
         name="firstName"
@@ -97,53 +97,29 @@
         required
       />
 
-      <label for="LastName">Last name</label>
+      <label for="lastName">Last name</label>
       <input
         type="text"
-        name="LastName"
-        id="LastName"
+        name="lastName"
+        id="lastName"
         placeholder="LastName"
         required
       />
 
-      <label for="personalID">Personal ID</label>
+      <label for="personalId">Personal ID</label>
       <input
-        type="number"
-        name="personalID"
-        id="personalID"
+        type="text"
+        name="personalId"
+        id="personalId"
         placeholder="Personal ID"
         required
       />
 
-      <label for="dateBirth">Date of birth</label>
-      <input type="date" name="dateBirth" id="dateBirth" required />
-
-      <label> Gender:</label>
-      <input
-        type="radio"
-        class="radio"
-        name="gender"
-        id="male"
-        value="Male"
-        required
-      />
-      <label for="male">Male</label>
-
-      <input
-        type="radio"
-        class="radio"
-        name="gender"
-        id="female"
-        value="Female"
-        required
-      />
-      <label for="female">Female</label>
-      <br />
-
-      <input type="checkbox" class="checkbox" name="agre" id="agre" required />
-      <label for="agre">I agree to the terms</label>
+      <label for="dateOfBirth">Date of birth</label>
+      <input type="date" name="dateOfBirth" id="dateOfBirth" required />
 
       <button type="submit">Add member</button>
     </form>
+    <script src="../script/addMember.js"></script>
   </body>
 </html>
