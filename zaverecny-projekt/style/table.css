@@ -25,6 +25,14 @@ table .delete-button {
   border-radius: 20px;
   font-size: 16px;
 }
+.allTables td .fa-info-circle {
+  color: green;
+  font-size: 1.3em;
+}
+.allTables td .fa-info-circle:hover {
+  color: lightgreen;
+  font-size: 1.48em;
+}
 
 .noData {
   display: flex;

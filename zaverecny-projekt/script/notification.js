@@ -34,6 +34,8 @@ function createTd(row, id) {
   td.textContent = id;
   row.appendChild(td);
 }
+
+// upravil som si format na datum
 function createTdDate(row, timestamp) {
   let td = document.createElement("td");
 

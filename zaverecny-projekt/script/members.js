@@ -18,11 +18,14 @@ async function fetchData() {
     createTd(row, members[i].firstName);
     createTd(row, members[i].lastName);
     createTd(row, members[i].personalId);
-    createTd(row, members[i].dateOfBirth);
+    createTdDate(row, members[i].dateOfBirth);
 
     let titleIcon = document.createElement("td");
     let icon = document.createElement("i");
     icon.classList.add("fa", "fa-info-circle");
+    icon.onclick = () => {
+      window.location.href = `detailMembers.html?id=${members[i].id}`;
+    };
     titleIcon.appendChild(icon);
     row.appendChild(titleIcon);
 
@@ -50,5 +53,19 @@ async function removeHandler(id) {
 function createTd(row, id) {
   let td = document.createElement("td");
   td.textContent = id;
+  row.appendChild(td);
+}
+function createTdDate(row, timestamp) {
+  let td = document.createElement("td");
+
+  const dateObject = new Date(timestamp);
+
+  const day = dateObject.getDate();
+  const month = dateObject.getMonth() + 1;
+  const year = dateObject.getFullYear();
+
+  const formattedDate = `${day}.${month}.${year}`;
+
+  td.textContent = formattedDate;
   row.appendChild(td);
 }

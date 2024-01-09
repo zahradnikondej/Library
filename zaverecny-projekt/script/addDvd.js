@@ -40,5 +40,5 @@ async function handleSubmit() {
   } catch (error) {
     console.error("Fetch error");
   }
-  //   window.location.href = "dvds.html";
+  window.location.href = "dvds.html";
 }

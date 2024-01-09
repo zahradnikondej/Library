@@ -1,0 +1,47 @@
+body {
+  background-color: #dce8e8;
+}
+
+.detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#myImage {
+  width: 50%;
+}
+
+form {
+  width: 40%;
+  padding: 10px 30px;
+  box-sizing: border-box;
+
+  margin: 20px 20px;
+}
+label {
+  color: #000080;
+}
+
+input,
+select {
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px 0;
+  background-color: #dce8e8;
+  border: 2px solid silver;
+}
+form button {
+  width: 120px;
+  padding: 5px 10px;
+  font-size: 18px;
+}
+.delete {
+  background-color: rgb(175, 22, 22);
+  color: white;
+}
+.update {
+  background-color: rgb(61, 213, 61);
+}

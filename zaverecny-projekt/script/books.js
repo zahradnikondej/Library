@@ -4,6 +4,7 @@ let noData = document.getElementById("noData");
 async function fetchBooks() {
   const response = await fetch("https://student-fed1.metis.academy/api/Books");
   const books = await response.json();
+  console.log(books);
 
   if (!response.ok) {
     let message = document.createElement("p");
@@ -24,6 +25,11 @@ async function fetchBooks() {
     let titleIcon = document.createElement("td");
     let icon = document.createElement("i");
     icon.classList.add("fa", "fa-info-circle");
+    // to ako mam zapisat to id na koniec mi poradil chatGPT
+    icon.onclick = () => {
+      window.location.href = `detailBook.html?id=${books[i].id}`;
+    };
+
     titleIcon.appendChild(icon);
     row.appendChild(titleIcon);
 

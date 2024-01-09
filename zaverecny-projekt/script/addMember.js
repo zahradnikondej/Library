@@ -10,6 +10,21 @@ async function handleSubmit() {
 
   let member = {};
 
+  const firstNameInput = document.getElementById("firstName");
+  let firstNameValue = firstNameInput.value.trim();
+
+  if (firstNameValue === "") {
+    alert("Please check first name - pole nemôže byť prázdne.");
+    return;
+  }
+  firstNameValue =
+    firstNameValue.charAt(0).toUpperCase() +
+    firstNameValue.slice(1).toLowerCase();
+
+  firstNameInput.value = firstNameValue;
+
+  member["firstName"] = firstNameValue;
+
   fields.forEach((field) => {
     member[field] = document.getElementById(field).value;
   });
@@ -25,6 +40,7 @@ async function handleSubmit() {
         body: JSON.stringify(member),
       }
     );
+
     if (response.ok) {
       alert("Succesfully");
     } else {
@@ -34,5 +50,4 @@ async function handleSubmit() {
   } catch (error) {
     console.error("Fetch error");
   }
-  window.location.href = "allMembers.html";
 }

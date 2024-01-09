@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -86,24 +86,44 @@
       </ul>
     </nav>
 
-    <form method="post">
+    <form method="post" autocomplete="off">
       <h1>Rent a title</h1>
       <label for="member">Member</label>
       <input
         type="text"
         name="member"
-        id="member"
+        id="memberInput"
         required
-        placeholder="Member"
+        placeholder="Select a member"
+        class="search-input"
+        list="dataListMembers"
       />
+      <datalist id="dataListMembers"></datalist>
 
       <label for="title">Title</label>
-      <input type="text" name="title" id="title" required placeholder="Title" />
-
+      <input
+        type="text"
+        name="title"
+        id="title"
+        required
+        placeholder="Select a title"
+        list="dataListTitle"
+      />
+      <datalist id="dataListTitle"></datalist>
       <label for="dateOfLoan">Date of loan</label>
-      <input type="date" name="dateOfLoan" id="dateOfLoan" required />
+      <input
+        type="date"
+        onload="getDate()"
+        class="form-control"
+        id="date"
+        name="date"
+        disabled
+      />
 
+      <p id="maximumDateBook"></p>
+      <p id="maximumDateDvd"></p>
       <button type="submit">Rent</button>
     </form>
+    <script src="../script/rentTitle.js"></script>
   </body>
 </html>

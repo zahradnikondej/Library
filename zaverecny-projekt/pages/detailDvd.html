@@ -3,18 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Books</title>
-    <link rel="stylesheet" href="../style/table.css" />
-    <link rel="stylesheet" href="../style/formSearch.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="../style/detail.css" />
     <link rel="stylesheet" href="../style/menu.css" />
+    <title>Document</title>
   </head>
   <body>
     <div class="logo">
@@ -33,7 +24,6 @@
         <a href="../index.html">LMS</a>
       </div>
     </div>
-
     <nav class="menu">
       <ul>
         <li>
@@ -87,58 +77,30 @@
         </li>
       </ul>
     </nav>
-    <div class="form">
-      <div class="center">
-        <h1><i class="fa-solid fa-book"></i>Books</h1>
-        <form method="get">
-          <input
-            type="text"
-            name="author"
-            id="author"
-            placeholder="Author"
-            required
-          />
+    <div class="detail">
+      <img src="../images/dvd.png" alt="" />
 
-          <input
-            type="text"
-            name="title"
-            id="title"
-            placeholder="Title"
-            required
-          />
+      <form onsubmit="updateHandler()">
+        <h1>DVD detail</h1>
+        <label for="author">Author Name</label>
+        <input type="text" id="author" />
 
-          <input
-            type="number"
-            name="isbn"
-            id="isbn"
-            placeholder="ISBN"
-            required
-          />
+        <label for="name">Title Name</label>
+        <input type="text" id="name" />
 
-          <button type="submit" class="button-search">Search</button>
-          <a href="addBook.html"> Add Book </a>
-        </form>
-      </div>
+        <label for="publishYear">Publish year</label>
+        <input type="number" id="publishYear" />
+
+        <label for="numberOfMinutes">Number of minute</label>
+        <input type="text" id="numberOfMinutes" />
+
+        <label for="totalAvailableCopies">Total available copies</label>
+        <input type="text" id="totalAvailableCopies" />
+
+        <button type="submit" class="update">Update</button>
+        <button onclick="removeHandler()" class="delete">Delete</button>
+      </form>
     </div>
-    <div class="container">
-      <table class="allTables">
-        <thead>
-          <tr>
-            <th>TITLE</th>
-            <th>AUTHOR</th>
-            <th>IBNS</th>
-            <th>AVAILABLE COPIES</th>
-            <th>TOTAL AVAILABLE COPIES</th>
-            <th>NUMBER OF PAGES</th>
-            <th>TITLE DETAIL</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody id="output"></tbody>
-      </table>
-    </div>
-    <div id="noData" class="noData"></div>
-
-    <script src="../script/books.js"></script>
+    <script src="../script/detailDvd.js"></script>
   </body>
 </html>

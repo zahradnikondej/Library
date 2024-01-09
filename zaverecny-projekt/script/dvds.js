@@ -4,6 +4,7 @@ let output = document.getElementById("output");
 async function fetchDvd() {
   const response = await fetch("https://student-fed1.metis.academy/api/Dvds");
   const dvds = await response.json();
+  console.log(dvds);
 
   if (!response.ok) {
     let message = document.createElement("p");
@@ -23,6 +24,9 @@ async function fetchDvd() {
     let titleIcon = document.createElement("td");
     let icon = document.createElement("i");
     icon.classList.add("fa", "fa-info-circle");
+    icon.onclick = () => {
+      window.location.href = `detailDvd.html?id=${dvds[i].id}`;
+    };
     titleIcon.appendChild(icon);
     row.appendChild(titleIcon);
 

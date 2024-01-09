@@ -8,6 +8,9 @@ form {
   margin: auto;
   padding: 10px 30px;
 }
+form p {
+  font-size: 19px;
+}
 label {
   color: #000080;
   font-size: 20px;
@@ -29,7 +32,8 @@ select {
 form button {
   background: linear-gradient(to bottom, white 0%, green 100%);
   color: white;
-  font-size: 18px;
+
+  font-size: 20px;
   padding: 10px 20px;
   display: block;
   margin: 20px 0;

@@ -5,9 +5,10 @@ async function fetchData() {
   const response = await fetch(
     "https://student-fed1.metis.academy/api/RentalEntries"
   );
-  const rentals = await response.json();
+  let rentals = await response.json();
 
-  console.log(rentals);
+  rentals = rentals.filter((r) => !r.isReturned);
+
   if (!response.ok) {
     let message = document.createElement("p");
     message.innerText = "No data to display";
@@ -42,6 +43,7 @@ async function fetchData() {
     icon.classList.add("fa", "fa-arrow-circle-right");
     icon.style.color = "blue";
     icon.style.fontSize = "1.3em";
+    icon.onclick = () => prolong(rentals[i].id);
     rightIcon.appendChild(icon);
     row.appendChild(rightIcon);
 
@@ -64,7 +66,19 @@ function createTd(row, id) {
   td.textContent = id;
   row.appendChild(td);
 }
-// chatGPT
+
 function typeBookOrDvd(type) {
   return type === 1 ? "Book" : type === 2 ? "DVD" : "Unknown";
+}
+
+async function prolong(id) {
+  fetch(
+    `https://student-fed1.metis.academy/api/RentalEntries/ProlongTitle/${id}`,
+    {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+    }
+  ).then(() => {
+    location.reload();
+  });
 }
