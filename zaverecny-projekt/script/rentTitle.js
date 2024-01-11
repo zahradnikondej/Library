@@ -82,3 +82,36 @@ function vypocitajMaxDatum() {
     "Maximum retrun day for dvd is:" + maxDateDvd.toLocaleDateString();
 }
 vypocitajMaxDatum();
+// async function handleSubmit() {
+//   event.preventDefault();
+//   let fields = ["member", "title"];
+
+//   let rent = {};
+
+//   fields.forEach((field) => {
+//     rent[field] = document.getElementById(field).value;
+//   });
+//   console.log(rent);
+//   try {
+//     const response = await fetch(
+//       "https://student-fed1.metis.academy/api/RentalEntries",
+//       {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(rent),
+//       }
+//     );
+
+//     if (response.ok) {
+//       alert("Succesfully!");
+//       fields.forEach((field) => {
+//         rent[field] = document.getElementById(field).value = "";
+//       });
+//     }
+//   } catch (error) {
+//     console.log("Error fetch", error);
+//   }
+//   // window.location.href = "allRentals.html";
+// }

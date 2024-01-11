@@ -6,10 +6,9 @@ async function fetchData() {
     "https://student-fed1.metis.academy/api/RentalEntries"
   );
   let rentals = await response.json();
-
   rentals = rentals.filter((r) => !r.isReturned);
-
-  if (!response.ok) {
+  console.log(rentals);
+  if (rentals.length === 0) {
     let message = document.createElement("p");
     message.innerText = "No data to display";
     noData.appendChild(message);
@@ -32,19 +31,40 @@ async function fetchData() {
 
     let leftIcon = document.createElement("td");
     let iconLeft = document.createElement("i");
-    iconLeft.classList.add("fa", "fa-arrow-circle-left");
+    iconLeft.classList.add("fa", "fa-arrow-circle-left", "left");
     iconLeft.style.color = "green";
-    iconLeft.style.fontSize = "1.3em";
+    iconLeft.style.fontSize = "1.2em";
+    iconLeft.addEventListener("mouseover", () => {
+      iconLeft.style.fontSize = "1.4em";
+      iconLeft.style.color = "lightgreen";
+    });
+    iconLeft.addEventListener("mouseout", () => {
+      iconLeft.style.fontSize = "1.2em";
+      iconLeft.style.color = "green";
+    });
+    iconLeft.onclick = () => {
+      returnRent(rentals[i].memberId, rentals[i].titleId, rentals[i].id);
+    };
     leftIcon.appendChild(iconLeft);
     row.appendChild(leftIcon);
 
     let rightIcon = document.createElement("td");
-    let icon = document.createElement("i");
-    icon.classList.add("fa", "fa-arrow-circle-right");
-    icon.style.color = "blue";
-    icon.style.fontSize = "1.3em";
-    icon.onclick = () => prolong(rentals[i].id);
-    rightIcon.appendChild(icon);
+    let iconRight = document.createElement("i");
+    iconRight.classList.add("fa", "fa-arrow-circle-right");
+    iconRight.style.color = "blue";
+    iconRight.style.fontSize = "1.2em";
+    iconRight.addEventListener("mouseover", () => {
+      iconRight.style.fontSize = "1.4em";
+      iconRight.style.color = "lightblue";
+    });
+    iconRight.addEventListener("mouseout", () => {
+      iconRight.style.fontSize = "1.2em";
+      iconRight.style.color = "blue";
+    });
+
+    iconRight.onclick = () =>
+      prolongRent(rentals[i].memberId, rentals[i].titleId, rentals[i].id);
+    rightIcon.appendChild(iconRight);
     row.appendChild(rightIcon);
 
     output.append(row);
@@ -63,7 +83,7 @@ async function removeHandler(id) {
 
 function createTd(row, id) {
   let td = document.createElement("td");
-  td.textContent = id;
+  td.textContent = id !== null ? id : "";
   row.appendChild(td);
 }
 
@@ -71,14 +91,46 @@ function typeBookOrDvd(type) {
   return type === 1 ? "Book" : type === 2 ? "DVD" : "Unknown";
 }
 
-async function prolong(id) {
-  fetch(
-    `https://student-fed1.metis.academy/api/RentalEntries/ProlongTitle/${id}`,
-    {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-    }
-  ).then(() => {
+async function prolongRent(memberId, titleId, id) {
+  try {
+    const response = await fetch(
+      `https://student-fed1.metis.academy/api/RentalEntries/ProlongTitle/${id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          memberId: memberId,
+          titleId: titleId,
+        }),
+      }
+    );
+
     location.reload();
-  });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function returnRent(memberId, titleId, id) {
+  try {
+    const response = await fetch(
+      `https://student-fed1.metis.academy/api/RentalEntries/ReturnTitle/${id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          memberId: memberId,
+          titleId: titleId,
+        }),
+      }
+    );
+
+    location.reload();
+  } catch (error) {
+    console.error(error);
+  }
 }

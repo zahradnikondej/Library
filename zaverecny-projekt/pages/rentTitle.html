@@ -86,13 +86,18 @@
       </ul>
     </nav>
 
-    <form method="post" autocomplete="off">
+    <form
+      id="rentForm"
+      method="post"
+      autocomplete="off"
+      onsubmit="handleSubmit()"
+    >
       <h1>Rent a title</h1>
       <label for="member">Member</label>
       <input
         type="text"
         name="member"
-        id="memberInput"
+        id="member"
         required
         placeholder="Select a member"
         class="search-input"
