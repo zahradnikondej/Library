@@ -1,0 +1,9 @@
+.container {
+  background-color: white;
+}
+
+.container div {
+  margin-top: 10px;
+  padding: 1px 20px;
+  background-color: silver;
+}

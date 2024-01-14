@@ -95,7 +95,7 @@ async function handleUpdate() {
     return;
   }
   dateInput.value = dateValue;
-  if (!confirm("Do you really want to update the book?")) return;
+  if (!confirm("Do you really want to update the member?")) return;
 
   const url = new URLSearchParams(window.location.search);
   const memberID = url.get("id");
@@ -118,7 +118,7 @@ async function handleUpdate() {
 async function removeHandler() {
   event.preventDefault();
 
-  if (!confirm("Do you really want to delete the book?")) return;
+  if (!confirm("Do you really want to delete the member?")) return;
   const url = new URLSearchParams(window.location.search);
   const memberID = url.get("id");
 
