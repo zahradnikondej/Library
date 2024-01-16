@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        height: 100%;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .top {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(68, 66, 66);
+        color: white;
+      }
+
+      nav {
+        text-align: center;
+        padding: 10px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        padding: 10px;
+      }
+
+      main {
+        flex: 1; /* Flexibilné rozloženie umožňujúce zaberanie dostupného priestoru */
+      }
+
+      .output div {
+        border: 1px solid silver;
+        margin: 10px;
+        padding: 5px 20px;
+      }
+
+      footer {
+        background-color: rgb(68, 66, 66);
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        padding: 20px 0;
+      }
+
+      #loader {
+        text-align: center;
+        padding: 20px;
+        visibility: hidden; /* skryté predvolene */
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="top"><h1>Nove clanky</h1></div>
+      <nav>
+        <a href="">Domov</a>
+        <a href="">Kategorie</a>
+        <a href="">O nas</a>
+      </nav>
+    </header>
+    <main>
+      <div id="output" class="output"></div>
+    </main>
+    <div id="loader"><span>Loading...</span></div>
+    <footer>&copy; <span id="currentYear"></span></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
