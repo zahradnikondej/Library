@@ -90,29 +90,11 @@
       <div class="center">
         <h1><i class="fa-solid fa-address-book"></i>All rentals</h1>
         <form method="get">
-          <input
-            type="text"
-            name="member"
-            id="member"
-            required
-            placeholder="Member"
-          />
+          <input type="text" name="member" id="member" placeholder="Member" />
 
-          <input
-            type="text"
-            name="title"
-            id="title"
-            required
-            placeholder="Title"
-          />
+          <input type="text" name="title" id="title" placeholder="Title" />
 
-          <input
-            type="text"
-            name="author"
-            id="author"
-            required
-            placeholder="Author"
-          />
+          <input type="text" name="author" id="author" placeholder="Author" />
 
           <select name="typNazvu" id="typNazvu">
             <option value="all">All types</option>
@@ -121,6 +103,7 @@
           </select>
 
           <button type="submit" class="button-search">Search</button>
+          <button class="button-reset">Reset</button>
           <a href="rentTitle.html"> Add rental </a>
         </form>
       </div>
@@ -143,7 +126,8 @@
         <tbody id="output"></tbody>
       </table>
     </div>
-    <div id="noData"></div>
+    <div id="noData" class="noData"></div>
     <script src="../script/rentals.js"></script>
+    <script src="../script/filter.js"></script>
   </body>
 </html>

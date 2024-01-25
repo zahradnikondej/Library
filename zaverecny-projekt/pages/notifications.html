@@ -91,31 +91,19 @@
         <form method="get">
           <h1><i class="fa-solid fa-bookmark"></i>Notifications</h1>
 
-          <input
-            type="text"
-            name="member"
-            id="member"
-            placeholder="Member"
-            required
-          />
+          <input type="text" name="member" id="member" placeholder="Member" />
 
           <input
             type="text"
             name="subject"
             id="subject"
             placeholder="Subject"
-            required
           />
 
-          <input
-            type="text"
-            name="text"
-            id="text"
-            placeholder="Text"
-            required
-          />
+          <input type="text" name="text" id="text" placeholder="Text" />
 
           <button type="submit" class="button-search">Search</button>
+          <button class="button-reset">Reset</button>
         </form>
       </div>
     </div>
@@ -134,5 +122,6 @@
     </div>
     <div id="noData" class="noData"></div>
     <script src="../script/notification.js"></script>
+    <script src="../script/filter.js"></script>
   </body>
 </html>

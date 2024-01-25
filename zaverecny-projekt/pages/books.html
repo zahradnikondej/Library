@@ -91,31 +91,14 @@
       <div class="center">
         <h1><i class="fa-solid fa-book"></i>Books</h1>
         <form method="get">
-          <input
-            type="text"
-            name="author"
-            id="author"
-            placeholder="Author"
-            required
-          />
+          <input type="text" name="author" id="author" placeholder="Author" />
 
-          <input
-            type="text"
-            name="title"
-            id="title"
-            placeholder="Title"
-            required
-          />
+          <input type="text" name="title" id="title" placeholder="Title" />
 
-          <input
-            type="number"
-            name="isbn"
-            id="isbn"
-            placeholder="ISBN"
-            required
-          />
+          <input type="number" name="isbn" id="isbn" placeholder="ISBN" />
 
           <button type="submit" class="button-search">Search</button>
+          <button class="button-reset">Reset</button>
           <a href="addBook.html"> Add Book </a>
         </form>
       </div>
@@ -124,9 +107,9 @@
       <table class="allTables">
         <thead>
           <tr>
-            <th>TITLE</th>
             <th>AUTHOR</th>
-            <th>IBNS</th>
+            <th>TITLE</th>
+            <th>ISBN</th>
             <th>AVAILABLE COPIES</th>
             <th>TOTAL AVAILABLE COPIES</th>
             <th>NUMBER OF PAGES</th>
@@ -140,5 +123,6 @@
     <div id="noData" class="noData"></div>
 
     <script src="../script/books.js"></script>
+    <script src="../script/filter.js"></script>
   </body>
 </html>

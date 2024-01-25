@@ -95,7 +95,6 @@
             name="firstName"
             id="firstName"
             placeholder="First name"
-            required
           />
 
           <input
@@ -103,18 +102,17 @@
             name="lastName"
             id="lastName"
             placeholder="Last name"
-            required
           />
 
           <input
-            type="number"
+            type="text"
             name="personalID"
             id="personalID"
             placeholder="Personal ID"
-            required
           />
 
           <button type="submit" class="button-search">Search</button>
+          <button class="button-reset">Reset</button>
           <a href="addMembers.html">Add Member</a>
         </form>
       </div>
@@ -136,5 +134,6 @@
     </div>
     <div id="noData" class="noData"></div>
     <script src="../script/members.js"></script>
+    <script src="../script/filter.js"></script>
   </body>
 </html>

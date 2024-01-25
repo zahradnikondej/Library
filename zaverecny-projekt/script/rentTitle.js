@@ -9,7 +9,7 @@ async function addMembersList() {
 
     data.forEach((item) => {
       const option = document.createElement("option");
-      option.value = `${item.firstName} ${item.lastName}`;
+      option.value = `${item.id} ${item.firstName} ${item.lastName} `;
       membersList.appendChild(option);
     });
   } catch (error) {
@@ -36,13 +36,13 @@ async function addTitleList() {
 
     books.forEach((item) => {
       const option = document.createElement("option");
-      option.value = `${item.name} / ${item.author} / ISBN:${item.isbn}`;
+      option.value = `${item.id} ${item.name} / ${item.author} / ISBN:${item.isbn}`;
       titleList.appendChild(option);
     });
 
     dvds.forEach((item) => {
       const option = document.createElement("option");
-      option.value = `${item.name} / ${item.author} `;
+      option.value = `${item.name} / ${item.author} ${item.id}`;
       titleList.appendChild(option);
     });
   } catch (error) {
@@ -82,36 +82,44 @@ function vypocitajMaxDatum() {
     "Maximum retrun day for dvd is:" + maxDateDvd.toLocaleDateString();
 }
 vypocitajMaxDatum();
-// async function handleSubmit() {
-//   event.preventDefault();
-//   let fields = ["member", "title"];
 
-//   let rent = {};
+async function handleSubmit() {
+  event.preventDefault();
 
-//   fields.forEach((field) => {
-//     rent[field] = document.getElementById(field).value;
-//   });
-//   console.log(rent);
-//   try {
-//     const response = await fetch(
-//       "https://student-fed1.metis.academy/api/RentalEntries",
-//       {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify(rent),
-//       }
-//     );
+  let memberInput = document.getElementById("member").value;
+  let memberId = parseInt(memberInput.split(" ")[0], 10);
 
-//     if (response.ok) {
-//       alert("Succesfully!");
-//       fields.forEach((field) => {
-//         rent[field] = document.getElementById(field).value = "";
-//       });
-//     }
-//   } catch (error) {
-//     console.log("Error fetch", error);
-//   }
-//   // window.location.href = "allRentals.html";
-// }
+  let titleInput = document.getElementById("title").value;
+  let titleId = parseInt(titleInput.split(" ")[0], 10);
+
+  let rent = {
+    memberId: memberId,
+    titleId: titleId,
+  };
+  console.log(memberId, titleId);
+
+  try {
+    const response = await fetch(
+      "https://student-fed1.metis.academy/api/RentalEntries",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(rent),
+      }
+    );
+
+    if (response.ok) {
+      alert("Successfully added!");
+
+      document.getElementById("member").value = "";
+      document.getElementById("title").value = "";
+    } else {
+      alert("Failed to add. Server returned: " + response.status);
+    }
+  } catch (error) {
+    console.error("Error while sending data: ", error);
+  }
+  window.location.href = "allRentals.html";
+}

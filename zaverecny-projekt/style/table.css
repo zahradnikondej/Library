@@ -4,6 +4,7 @@
 }
 .allTables td {
   text-align: center;
+  padding: 5px;
 }
 .allTables th {
   font-size: 14px;

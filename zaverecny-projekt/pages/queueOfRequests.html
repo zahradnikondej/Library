@@ -90,31 +90,14 @@
       <div class="center">
         <form method="get">
           <h1><i class="fa-solid fa-address-book"></i>Queue of requests</h1>
-          <input
-            type="text"
-            name="member"
-            id="member"
-            required
-            placeholder="Member"
-          />
+          <input type="text" name="member" id="member" placeholder="Member" />
 
-          <input
-            type="text"
-            name="title"
-            id="title"
-            required
-            placeholder="Title"
-          />
+          <input type="text" name="title" id="title" placeholder="Title" />
 
-          <input
-            type="text"
-            name="author"
-            id="author"
-            required
-            placeholder="Author"
-          />
+          <input type="text" name="author" id="author" placeholder="Author" />
 
           <button type="submit" class="button-search">Search</button>
+          <button class="button-reset">Reset</button>
         </form>
       </div>
     </div>
@@ -133,5 +116,6 @@
     </div>
     <div id="noData" class="noData"></div>
     <script src="../script/queueOfRequest.js"></script>
+    <script src="../script/filter.js"></script>
   </body>
 </html>

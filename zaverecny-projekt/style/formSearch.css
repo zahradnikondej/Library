@@ -40,6 +40,15 @@ select {
   cursor: pointer;
   transform: scale(0.95);
 }
+.button-reset {
+  padding: 5px 30px;
+  background: linear-gradient(to bottom, white 0%, red 100%);
+}
+.button-reset:hover {
+  background: linear-gradient(to top, white 0%, red 100%);
+  cursor: pointer;
+  transform: scale(0.95);
+}
 @media only screen and (max-width: 420px) {
   .form {
     padding: 10px 0;

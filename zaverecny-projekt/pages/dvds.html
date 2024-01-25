@@ -91,24 +91,13 @@
     <div class="form">
       <div class="center">
         <h1><i class="fa-solid fa-compact-disc"></i>DVD's</h1>
-        <form method="get">
-          <input
-            type="text"
-            name="author"
-            id="author"
-            placeholder="Author"
-            required
-          />
+        <form method="get" id="searchForm">
+          <input type="text" name="author" id="author" placeholder="Author" />
 
-          <input
-            type="text"
-            name="title"
-            id="title"
-            placeholder="Title"
-            required
-          />
+          <input type="text" name="title" id="title" placeholder="Title" />
 
           <button type="submit" class="button-search">Search</button>
+          <button class="button-reset">Reset</button>
           <a href="addDvd.html">Add DVD</a>
         </form>
       </div>
@@ -131,5 +120,6 @@
     </div>
     <div id="noData" class="noData"></div>
     <script src="../script/dvds.js"></script>
+    <script src="../script/filter.js"></script>
   </body>
 </html>

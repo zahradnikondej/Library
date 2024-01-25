@@ -1,10 +1,10 @@
 let output = document.getElementById("output");
+
 let noData = document.getElementById("noData");
 
 async function fetchBooks() {
   const response = await fetch("https://student-fed1.metis.academy/api/Books");
   const books = await response.json();
-  console.log(books);
 
   if (!response.ok) {
     let message = document.createElement("p");
@@ -15,8 +15,8 @@ async function fetchBooks() {
   for (let i = 0; i < books.length; i++) {
     let row = document.createElement("tr");
 
-    createTd(row, books[i].name);
     createTd(row, books[i].author);
+    createTd(row, books[i].name);
     createTd(row, books[i].isbn);
     createTd(row, books[i].availableCopies);
     createTd(row, books[i].totalAvailableCopies);
