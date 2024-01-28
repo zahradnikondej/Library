@@ -12,8 +12,6 @@ async function fetchData() {
       message.innerText = "No data to display";
       noData.appendChild(message);
     }
-
-    const data = await response.json();
   } catch (error) {
     console.error("Error fetching data:", error);
   }
