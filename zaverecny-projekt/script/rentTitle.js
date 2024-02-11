@@ -109,6 +109,7 @@ async function handleSubmit() {
         body: JSON.stringify(rent),
       }
     );
+    const error = await response.json();
 
     if (response.ok) {
       alert("Successfully added!");
@@ -116,7 +117,7 @@ async function handleSubmit() {
       document.getElementById("member").value = "";
       document.getElementById("title").value = "";
     } else {
-      alert("Failed to add. Server returned: " + response.status);
+      alert("Failed to add. Server returned: " + error);
     }
   } catch (error) {
     console.error("Error while sending data: ", error);

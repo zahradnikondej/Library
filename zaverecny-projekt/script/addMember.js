@@ -107,3 +107,19 @@ async function handleSubmit() {
     console.error("Fetch error");
   }
 }
+
+const objectofMix = {
+  key: "value",
+  key: "value",
+  key: number,
+  Array: [
+    {
+      key: "value",
+      key: "value",
+    },
+    {
+      key: "value",
+      key: "value",
+    },
+  ],
+};
